@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Contact</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="apply.html">Apply Now</a></li>
+            <li><a href="pay_rent.html">Pay Rent</a></li>
+        </ul>
+    </nav>
+    <main>
+        <p>For any inquiries, please use the form below to contact us.</p>
+        <form action="/contact" method="POST">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5"></textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    <script src="validation.js" defer></script>
+</body>
+</html>
