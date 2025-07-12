@@ -4,31 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pay Rent</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-    <header>
-        <h1>Pay Rent</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="apply.html">Apply Now</a></li>
-            <li><a href="pay_rent.html">Pay Rent</a></li>
-        </ul>
-    </nav>
-    <main>
-        <form action="/pay_rent" method="POST">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name"><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email"><br>
-            <label for="amount">Amount:</label><br>
-            <input type="number" id="amount" name="amount"><br>
-            <input type="submit" value="Submit Payment">
-        </form>
-    </main>
-    <script src="validation.js" defer></script>
+    <section id="section-wrapper">
+        <div class="box-wrapper">
+            <div class="form-wrap">
+                <form action="/pay_rent" method="POST">
+                    <h2 class="form-title">Pay Rent</h2>
+                    <div class="form-fields">
+                        <div class="form-group">
+                            <input type="text" placeholder="Name" name="name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" placeholder="Amount" name="amount">
+                        </div>
+                    </div>
+                    <input type="submit" value="Submit Payment" class="submit-button">
+                </form>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
