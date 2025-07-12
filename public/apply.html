@@ -4,135 +4,171 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apply Now</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-    <header>
-        <h1>Apply Now</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="apply.html">Apply Now</a></li>
-            <li><a href="pay_rent.html">Pay Rent</a></li>
-        </ul>
-    </nav>
-    <main>
-        <form action="/apply" method="POST" enctype="multipart/form-data">
-            <h2>Rental Information</h2>
-            <label for="monthly_rent">Monthly Rent:</label>
-            <input type="number" id="monthly_rent" name="monthly_rent">
-            <label for="deposit_offered">Deposit Offered:</label>
-            <input type="number" id="deposit_offered" name="deposit_offered">
-            <label for="date">Date:</label>
-            <input type="date" id="date" name="date">
-            <label for="time">Time:</label>
-            <input type="time" id="time" name="time">
-            <label for="occupants">Number of Occupants:</label>
-            <input type="number" id="occupants" name="occupants">
-
-            <h2>Personal Information</h2>
-            <label for="fullname">Full Name:</label>
-            <input type="text" id="fullname" name="fullname">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            <label for="ssn">Social Security Number:</label>
-            <input type="text" id="ssn" name="ssn">
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone">
-            <label for="smokers">Smokers in Household:</label>
-            <input type="radio" id="smokers_yes" name="smokers" value="yes">
-            <label for="smokers_yes">Yes</label>
-            <input type="radio" id="smokers_no" name="smokers" value="no">
-            <label for="smokers_no">No</label>
-            <label for="pets">Pets:</label>
-            <input type="radio" id="pets_yes" name="pets" value="yes">
-            <label for="pets_yes">Yes</label>
-            <input type="radio" id="pets_no" name="pets" value="no">
-            <label for="pets_no">No</label>
-            <label for="id_card_front">ID Card (Front):</label>
-            <input type="file" id="id_card_front" name="id_card_front">
-            <label for="id_card_back">ID Card (Back):</label>
-            <input type="file" id="id_card_back" name="id_card_back">
-
-            <h2>Address Information</h2>
-            <label for="street_address">Street Address:</label>
-            <input type="text" id="street_address" name="street_address">
-            <label for="street_address_line_2">Street Address Line 2:</label>
-            <input type="text" id="street_address_line_2" name="street_address_line_2">
-            <label for="city">City:</label>
-            <input type="text" id="city" name="city">
-            <label for="state">State:</label>
-            <input type="text" id="state" name="state">
-            <label for="postal_code">Postal Code:</label>
-            <input type="text" id="postal_code" name="postal_code">
-            <label for="country">Country:</label>
-            <input type="text" id="country" name="country">
-
-            <h2>Rental History</h2>
-            <label for="check_in">Check-in Date:</label>
-            <input type="date" id="check_in" name="check_in">
-            <label for="check_out">Check-out Date:</label>
-            <input type="date" id="check_out" name="check_out">
-            <label for="reason_for_vacating">Reason for Vacating:</label>
-            <textarea id="reason_for_vacating" name="reason_for_vacating" rows="5"></textarea>
-            <label for="present_landlord_first_name">Present Landlord First Name:</label>
-            <input type="text" id="present_landlord_first_name" name="present_landlord_first_name">
-            <label for="present_landlord_last_name">Present Landlord Last Name:</label>
-            <input type="text" id="present_landlord_last_name" name="present_landlord_last_name">
-            <label for="present_landlord_phone">Present Landlord Phone:</label>
-            <input type="tel" id="present_landlord_phone" name="present_landlord_phone">
-            <label for="previous_landlord_first_name">Previous Landlord First Name:</label>
-            <input type="text" id="previous_landlord_first_name" name="previous_landlord_first_name">
-            <label for="previous_landlord_last_name">Previous Landlord Last Name:</label>
-            <input type="text" id="previous_landlord_last_name" name="previous_landlord_last_name">
-            <label for="previous_landlord_phone">Previous Landlord Phone:</label>
-            <input type="tel" id="previous_landlord_phone" name="previous_landlord_phone">
-
-            <h2>Employment Information</h2>
-            <label for="present_employer">Present Employer:</label>
-            <input type="text" id="present_employer" name="present_employer">
-            <label for="present_street_address_line_2">Street Address Line 2:</label>
-            <input type="text" id="present_street_address_line_2" name="present_street_address_line_2">
-            <label for="present_city">City:</label>
-            <input type="text" id="present_city" name="present_city">
-            <label for="present_state_province">State/Province:</label>
-            <input type="text" id="present_state_province" name="present_state_province">
-            <label for="present_postal_zip_code">Postal/Zip Code:</label>
-            <input type="text" id="present_postal_zip_code" name="present_postal_zip_code">
-            <label for="present_country">Country:</label>
-            <input type="text" id="present_country" name="present_country">
-            <label for="length_of_employment">Length of Employment:</label>
-            <input type="text" id="length_of_employment" name="length_of_employment">
-            <label for="current_salary_range">Current Salary Range:</label>
-            <input type="text" id="current_salary_range" name="current_salary_range">
-            <label for="proof_of_employment">Proof of Employment:</label>
-            <input type="file" id="proof_of_employment" name="proof_of_employment">
-
-            <h2>Next of Kin</h2>
-            <label for="next_of_kin_first_name">First Name:</label>
-            <input type="text" id="next_of_kin_first_name" name="next_of_kin_first_name">
-            <label for="next_of_kin_last_name">Last Name:</label>
-            <input type="text" id="next_of_kin_last_name" name="next_of_kin_last_name">
-            <label for="next_of_kin_relationship">Relationship:</label>
-            <input type="text" id="next_of_kin_relationship" name="next_of_kin_relationship">
-            <label for="next_of_kin_tel">Phone:</label>
-            <input type="tel" id="next_of_kin_tel" name="next_of_kin_tel">
-            <label for="next_of_kin_email">Email:</label>
-            <input type="email" id="next_of_kin_email" name="next_of_kin_email">
-
-            <h2>Credit Information</h2>
-            <label for="credit_report_and_score">Credit Report and Score:</label>
-            <input type="file" id="credit_report_and_score" name="credit_report_and_score">
-            <label for="credit_report_date">Credit Report Date:</label>
-            <input type="date" id="credit_report_date" name="credit_report_date">
-            <label for="credit_report_time">Credit Report Time:</label>
-            <input type="time" id="credit_report_time" name="credit_report_time">
-
-            <input type="submit" value="Submit Application">
-        </form>
-    </main>
-    <script src="validation.js" defer></script>
+    <section id="section-wrapper">
+        <div class="box-wrapper">
+            <div class="form-wrap">
+                <form action="/apply" method="POST" enctype="multipart/form-data">
+                    <h2 class="form-title">Apply Now</h2>
+                    <div class="form-fields">
+                        <div class="form-group">
+                            <input type="number" placeholder="Monthly Rent" name="monthly_rent">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" placeholder="Deposit Offered" name="deposit_offered">
+                        </div>
+                        <div class="form-group">
+                            <input type="date" name="date">
+                        </div>
+                        <div class="form-group">
+                            <input type="time" name="time">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" placeholder="Number of Occupants" name="occupants">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Full Name" name="fullname">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Social Security Number" name="ssn">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            Smokers in Household:
+                            <input type="radio" id="smokers_yes" name="smokers" value="yes">
+                            <label for="smokers_yes">Yes</label>
+                            <input type="radio" id="smokers_no" name="smokers" value="no">
+                            <label for="smokers_no">No</label>
+                        </div>
+                        <div class="form-group">
+                            Pets:
+                            <input type="radio" id="pets_yes" name="pets" value="yes">
+                            <label for="pets_yes">Yes</label>
+                            <input type="radio" id="pets_no" name="pets" value="no">
+                            <label for="pets_no">No</label>
+                        </div>
+                        <div class="form-group">
+                            ID Card (Front):
+                            <input type="file" name="id_card_front">
+                        </div>
+                        <div class="form-group">
+                            ID Card (Back):
+                            <input type="file" name="id_card_back">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Street Address" name="street_address">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Street Address Line 2" name="street_address_line_2">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="City" name="city">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="State" name="state">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Postal Code" name="postal_code">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Country" name="country">
+                        </div>
+                        <div class="form-group">
+                            Check-in Date:
+                            <input type="date" name="check_in">
+                        </div>
+                        <div class="form-group">
+                            Check-out Date:
+                            <input type="date" name="check_out">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="reason_for_vacating" placeholder="Reason for Vacating"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Present Landlord First Name" name="present_landlord_first_name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Present Landlord Last Name" name="present_landlord_last_name">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Present Landlord Phone" name="present_landlord_phone">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Previous Landlord First Name" name="previous_landlord_first_name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Previous Landlord Last Name" name="previous_landlord_last_name">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Previous Landlord Phone" name="previous_landlord_phone">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Present Employer" name="present_employer">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Street Address Line 2" name="present_street_address_line_2">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="City" name="present_city">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="State/Province" name="present_state_province">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Postal/Zip Code" name="present_postal_zip_code">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Country" name="present_country">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Length of Employment" name="length_of_employment">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Current Salary Range" name="current_salary_range">
+                        </div>
+                        <div class="form-group">
+                            Proof of Employment:
+                            <input type="file" name="proof_of_employment">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Next of Kin First Name" name="next_of_kin_first_name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Next of Kin Last Name" name="next_of_kin_last_name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Next of Kin Relationship" name="next_of_kin_relationship">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Next of Kin Phone" name="next_of_kin_tel">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Next of Kin Email" name="next_of_kin_email">
+                        </div>
+                        <div class="form-group">
+                            Credit Report and Score:
+                            <input type="file" name="credit_report_and_score">
+                        </div>
+                        <div class="form-group">
+                            Credit Report Date:
+                            <input type="date" name="credit_report_date">
+                        </div>
+                        <div class="form-group">
+                            Credit Report Time:
+                            <input type="time" name="credit_report_time">
+                        </div>
+                    </div>
+                    <input type="submit" value="Submit Application" class="submit-button">
+                </form>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
