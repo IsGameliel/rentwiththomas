@@ -77,7 +77,7 @@ app.post('/apply', upload.fields([
         ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
         ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
         ?, ?, ?, ?, ?, ?
-    )\`);
+    )`);
     stmt.run(
         req.body.monthly_rent,
         req.body.deposit_offered,
