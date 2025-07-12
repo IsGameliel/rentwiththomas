@@ -71,7 +71,7 @@ app.post('/apply', upload.fields([
     { name: 'proof_of_employment', maxCount: 1 },
     { name: 'credit_report_and_score', maxCount: 1 }
 ]), (req, res) => {
-    const stmt = db.prepare(\`INSERT INTO applications VALUES (
+    const stmt = db.prepare(`INSERT INTO applications VALUES (
         ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
         ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
         ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
