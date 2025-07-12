@@ -3,23 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>ThomasRentals</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fed124f64f.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <h1>Home</h1>
+        <div class="logo">
+            <img src="img/mimilogo-removebg-preview.png" alt="" style="width: 15rem; height: 5rem;">
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="apply.html">Apply Now</a>
+            <a href="contact.html">Contact</a>
+            <a href="pay_rent.html">Pay Rent</a>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="apply.html">Apply Now</a></li>
-            <li><a href="pay_rent.html">Pay Rent</a></li>
-        </ul>
-    </nav>
-    <main>
-        <p>Welcome to our website!</p>
-    </main>
+    <section class="mimi">
+        <h1>Wecome to <span>ThomasRentals</span></h1>
+        <p>We're glad to have you here. Our platform is designed to make your housing journey easy and convenient. <br> Whether you'er applying for a new home, making rent payments, or submitting complaints or requests, <br> you can do it all in one place- securely and stress-free.</p><br><br>
+        <a href="apply.html" class="btn">Apply Now</a>
+    </section>
+    <section class="end">
+        <div class="row">
+            <div class="icon"><i class="fa-solid fa-pen-clip fa-beat-fade" style="color: #74C0FC;"></i></div>
+            <h3>Apply Now</h3>
+            <p>Online rental application form</p>
+        </div>
+        <div class="row">
+            <div class="icon"><i class="fa-brands fa-cc-paypal fa-beat-fade" style="color: #74C0FC;"></i></div>
+            <h3>Pay Rent</h3>
+            <p>card payment section <br> (Stripe or PayPal checkout)</p>
+        </div>
+        <div class="row">
+            <div class="icon"><i class="fa-solid fa-address-book fa-beat-fade" style="color: #74C0FC;"></i></div>
+            <h1>Contact</h1>
+            <p>Phone, email, WhatsApp, or live chat</p>
+        </div>
+    </section>
 </body>
 </html>
