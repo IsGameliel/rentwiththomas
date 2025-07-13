@@ -13,12 +13,34 @@
         <div class="logo">
             <img src="../img/mimilogo-removebg-preview.png" alt="" style="width: 15rem; height: 5rem;">
         </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="apply.html">Apply Now</a>
-            <a href="contact.html">Contact</a>
-            <a href="pay_rent.html">Pay Rent</a>
-        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm mb-4">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
+                <img src="../img/mimilogo-removebg-preview.png" alt="Logo" style="width: 10rem; height: 3.5rem; object-fit: contain;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold px-3" href=index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold px-3" href="apply.html">Apply Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold px-3" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold px-3" href="pay_rent.html">
+                            Pay rent
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     </header>
     <section id="section-wrapper">
         <div class="box-wrapper">
