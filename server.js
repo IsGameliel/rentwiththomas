@@ -143,7 +143,7 @@ app.post('/pay_rent', (req, res) => {
     const stmt = db.prepare("INSERT INTO payments VALUES (?, ?, ?)");
     stmt.run(name, email, amount);
     stmt.finalize();
-    res.redirect('/pay_now.html');
+    res.redirect('/pay_rent_now.html');
 });
 
 app.listen(port, () => {
