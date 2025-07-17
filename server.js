@@ -12,7 +12,8 @@ app.use(bodyParser.json());
 const db = new sqlite3.Database('database.db');
 
 const multer = require('multer');
-const upload = multer({ dest: 'uploads/' });
+const os = require('os');
+const upload = multer({ dest: os.tmpdir() });
 
 db.serialize(() => {
     db.run(`CREATE TABLE applications (
