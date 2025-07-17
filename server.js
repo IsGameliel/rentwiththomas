@@ -9,7 +9,7 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const db = new sqlite3.Database(':memory:');
+const db = new sqlite3.Database('database.db');
 
 const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
