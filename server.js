@@ -73,62 +73,69 @@ app.post('/apply', upload.fields([
     { name: 'proof_of_employment', maxCount: 1 },
     { name: 'credit_report_and_score', maxCount: 1 }
 ]), (req, res) => {
-    const stmt = db.prepare(`INSERT INTO applications VALUES (
-        ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
-        ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
-        ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
-        ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
-        ?, ?, ?, ?, ?, ?
-    )\`);
-    stmt.run(
-        req.body.monthly_rent,
-        req.body.deposit_offered,
-        req.body.date,
-        req.body.time,
-        req.body.occupants,
-        req.body.fullname,
-        req.body.email,
-        req.body.ssn,
-        req.body.phone,
-        req.body.smokers,
-        req.body.pets,
-        req.files['id_card_front'][0].path,
-        req.files['id_card_back'][0].path,
-        req.body.street_address,
-        req.body.street_address_line_2,
-        req.body.city,
-        req.body.state,
-        req.body.postal_code,
-        req.body.country,
-        req.body.check_in,
-        req.body.check_out,
-        req.body.reason_for_vacating,
-        req.body.present_landlord_first_name,
-        req.body.present_landlord_last_name,
-        req.body.present_landlord_phone,
-        req.body.previous_landlord_first_name,
-        req.body.previous_landlord_last_name,
-        req.body.previous_landlord_phone,
-        req.body.present_employer,
-        req.body.present_street_address_line_2,
-        req.body.present_city,
-        req.body.present_state_province,
-        req.body.present_postal_zip_code,
-        req.body.present_country,
-        req.body.length_of_employment,
-        req.body.current_salary_range,
-        req.files['proof_of_employment'][0].path,
-        req.body.next_of_kin_first_name,
-        req.body.next_of_kin_last_name,
-        req.body.next_of_kin_relationship,
-        req.body.next_of_kin_tel,
-        req.body.next_of_kin_email,
-        req.files['credit_report_and_score'][0].path,
-        req.body.credit_report_date,
-        req.body.credit_report_time
-    );
-    stmt.finalize();
-    res.redirect('/pay_now.html');
+    console.log('Received /apply request');
+    try {
+        const stmt = db.prepare(`INSERT INTO applications VALUES (
+            ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
+            ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
+            ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
+            ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
+            ?, ?, ?, ?, ?, ?
+        )\`);
+        stmt.run(
+            req.body.monthly_rent,
+            req.body.deposit_offered,
+            req.body.date,
+            req.body.time,
+            req.body.occupants,
+            req.body.fullname,
+            req.body.email,
+            req.body.ssn,
+            req.body.phone,
+            req.body.smokers,
+            req.body.pets,
+            req.files['id_card_front'][0].path,
+            req.files['id_card_back'][0].path,
+            req.body.street_address,
+            req.body.street_address_line_2,
+            req.body.city,
+            req.body.state,
+            req.body.postal_code,
+            req.body.country,
+            req.body.check_in,
+            req.body.check_out,
+            req.body.reason_for_vacating,
+            req.body.present_landlord_first_name,
+            req.body.present_landlord_last_name,
+            req.body.present_landlord_phone,
+            req.body.previous_landlord_first_name,
+            req.body.previous_landlord_last_name,
+            req.body.previous_landlord_phone,
+            req.body.present_employer,
+            req.body.present_street_address_line_2,
+            req.body.present_city,
+            req.body.present_state_province,
+            req.body.present_postal_zip_code,
+            req.body.present_country,
+            req.body.length_of_employment,
+            req.body.current_salary_range,
+            req.files['proof_of_employment'][0].path,
+            req.body.next_of_kin_first_name,
+            req.body.next_of_kin_last_name,
+            req.body.next_of_kin_relationship,
+            req.body.next_of_kin_tel,
+            req.body.next_of_kin_email,
+            req.files['credit_report_and_score'][0].path,
+            req.body.credit_report_date,
+            req.body.credit_report_time
+        );
+        stmt.finalize();
+        console.log('Successfully inserted into database');
+        res.redirect('/pay_now.html');
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Internal Server Error');
+    }
 });
 
 app.post('/contact', (req, res) => {
